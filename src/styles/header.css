@@ -1,0 +1,68 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 6;
+}
+
+/* BLOQUE IZQUIERDO */
+.divHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.logo{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    gap: clamp(0.5rem, 2vw, 2rem);
+}
+
+.explore, .create {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.home{ 
+  color: white;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* BLOQUE DERECHO */
+.divImages {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.notifications-img, .messages-img, .profile-img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 730px) {
+  .navbar{
+    display: none;
+  }
+
+  .notifications-img, .messages-img {
+    display: none;
+  }
+}
