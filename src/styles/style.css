@@ -6,4 +6,10 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     overflow: hidden;
+
+    --border-1: coral;
+    --border-2: yellow;
+    --border-3: mediumspringgreen;
+    --border-4: rgb(62, 187, 249);
+    --border-5: violet;
 }

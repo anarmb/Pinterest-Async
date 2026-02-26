@@ -1,7 +1,7 @@
-import "../styles/header.css";
-import { Searchbar } from "../components/searchbar.js";
-import { RequestImages } from "../services/unsplashAPI.js";
-import { showImages } from "./gallery.js";
+import "./header.css";
+import { Searchbar } from "../searchbar/searchbar.js";
+import { RequestImages } from "../../services/unsplashAPI.js";
+import { showImages } from "../gallery/gallery.js";
 
 export const Header = () => { 
     const header = document.createElement("header");
@@ -15,7 +15,6 @@ export const Header = () => {
     logo.className = "logo";
 
     logo.addEventListener("click", async () => {
-    console.log("Loading random images...");
     const randomImages = await RequestImages("");
     showImages(randomImages);
     });
@@ -53,7 +52,6 @@ export const Header = () => {
     profile.className = "profile-img";
 
     const searchBar = Searchbar(async(query) => {
-        console.log("Searching", query);
         const results = await RequestImages(query);
         showImages(results);
     });
@@ -61,7 +59,7 @@ export const Header = () => {
     divHeader.append(logo, navBar);
     divImages.append(notifications, messages, profile);
     header.append(divHeader, searchBar, divImages);
-    app.appendChild(header);
+    app.prepend(header);
 
     (async () => {
     const randomImages = await RequestImages("");

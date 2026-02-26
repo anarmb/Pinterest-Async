@@ -41,23 +41,23 @@
 }
 
 .image-card:nth-child(1n) img { 
-    border-color: coral; 
+    border-color: var(--border-1); 
 }
 
 .image-card:nth-child(2n) img {
-    border-color: yellow; 
+    border-color: var(--border-2);
 }
 
 .image-card:nth-child(3n) img {
-    border-color: mediumspringgreen; 
+    border-color: var(--border-3); 
 } 
 
 .image-card:nth-child(4n) img {
-    border-color: rgb(62, 187, 249); 
+    border-color: var(--border-4);
 }
 
 .image-card:nth-child(5n) img {
-    border-color: violet; 
+    border-color: var(--border-5);
 }
 
 .author-name {

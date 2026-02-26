@@ -1,18 +1,17 @@
-import "../styles/gallery.css";
+import "./gallery.css";
 let gallery; 
 
 export const Gallery = () => {
     const app = document.querySelector("#app");
+    const main = document.createElement("main");
     gallery = document.createElement("div"); 
     gallery.className = "gallery";
-    app.appendChild(gallery);
+    main.appendChild(gallery);
+    app.appendChild(main);
 };
 
 export const showImages = (results) => {
-    if (!gallery) {
-        console.error("Gallery is not running");
-        return;
-    }
+    
     
     gallery.innerHTML = "";
 

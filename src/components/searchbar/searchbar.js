@@ -1,4 +1,4 @@
-import "../styles/searchbar.css"
+import "../searchbar/searchbar.css"
 
 export const Searchbar = (onSearch) => {
 
